@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" role="img" aria-label="Abstract food illustration">
+<rect width="900" height="700" fill="#c99b56"/>
+<circle cx="720" cy="150" r="190" fill="#fff" opacity=".12"/>
+<circle cx="120" cy="620" r="230" fill="#fff" opacity=".10"/>
+<path d="M0 520 Q210 390 420 520 T900 470 V700 H0Z" fill="#fff" opacity=".12"/>
+<path d="M80 120 C210 20 330 230 450 120 S700 40 820 180" fill="none" stroke="#342a21" stroke-width="3" opacity=".24"/>
+<text x="450" y="340" text-anchor="middle" fill="#342a21" font-family="Georgia,serif" font-size="58" font-style="italic">FLAVOUR</text>
+<text x="450" y="395" text-anchor="middle" fill="#342a21" opacity=".72" font-family="Arial,sans-serif" font-size="19" letter-spacing="3">REPLACE WITH YOUR IMAGE</text>
+</svg>

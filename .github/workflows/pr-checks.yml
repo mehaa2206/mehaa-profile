@@ -1,0 +1,16 @@
+name: Portfolio pull request checks
+on:
+  pull_request:
+    branches: [main, develop]
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check title, image alt text and debug logs
+        shell: bash
+        run: |
+          set -e
+          grep -Eiq '<title>[^<]+</title>' index.html
+          if grep -E '<img[^>]*>' index.html | grep -Eiv 'alt='; then echo 'Image missing alt text'; exit 1; fi
+          if grep -RIn --include='*.js' 'console\.log' js/; then echo 'Remove console.log'; exit 1; fi

@@ -1,0 +1,73 @@
+
+/* =========================================
+   LIGHT THEME — CORAL × PEACH
+========================================= */
+
+:root {
+    color-scheme: light;
+
+    /* Backgrounds */
+    --page: #FFF1EB;
+    --surface: #FFFFFF;
+
+    /* Text */
+    --ink: #252B48;
+    --muted: #77758A;
+
+    /* Borders */
+    --line: #F0D5CC;
+
+    /* Accents */
+    --accent: #E85D5A;
+    --accent-2: #F08B78;
+
+    /* Highlights */
+    --highlight: #FFD166;
+    --lavender: #F7C8B8;
+
+    --card-ink: #252B48;
+
+    /* Typography */
+    --display: "Playfair Display", Georgia, serif;
+    --body: "DM Sans", Arial, sans-serif;
+    --mono: "DM Mono", monospace;
+
+    /* Layout */
+    --page-width: 1160px;
+
+    /* Shadows */
+    --shadow: 0 24px 65px rgba(37, 43, 72, .12);
+}
+
+
+/* =========================================
+   DARK THEME — MIDNIGHT BLUE
+========================================= */
+
+body.dark-theme {
+    color-scheme: dark;
+
+    /* Backgrounds */
+    --page: #151B32;
+    --surface: #222B49;
+
+    /* Text */
+    --ink: #FFF1EB;
+    --muted: #C1BFD0;
+
+    /* Borders */
+    --line: #414B6C;
+
+    /* Accents */
+    --accent: #FF8878;
+    --accent-2: #FFB19C;
+
+    /* Highlights */
+    --highlight: #FFD166;
+    --lavender: #A66C82;
+
+    --card-ink: #FFF1EB;
+
+    /* Shadows */
+    --shadow: 0 24px 65px rgba(0, 0, 0, .4);
+}

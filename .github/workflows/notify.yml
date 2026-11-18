@@ -1,0 +1,20 @@
+name: Deployment notification
+on:
+  workflow_run:
+    workflows: ["Deploy portfolio to GitHub Pages"]
+    types: [completed]
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Slack notification when configured
+        if: ${{ secrets.SLACK_WEBHOOK_URL != '' }}
+        env:
+          WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          RESULT: ${{ github.event.workflow_run.conclusion }}
+          REPOSITORY: ${{ github.repository }}
+        run: |
+          curl --fail --silent --show-error -X POST -H 'Content-type: application/json' --data "{\"text\":\"Portfolio deployment for ${REPOSITORY}: ${RESULT}\"}" "$WEBHOOK_URL"
+      - name: Skip note when no webhook is configured
+        if: ${{ secrets.SLACK_WEBHOOK_URL == '' }}
+        run: echo "Add SLACK_WEBHOOK_URL to repository secrets to enable Slack notifications."
