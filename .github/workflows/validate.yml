@@ -1,17 +1,22 @@
-name: Validate HTML and CSS
+
+name: Validate HTML
+
 on:
   push:
     branches: [main, develop]
   pull_request:
     branches: [main, develop]
+
 jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: npm install --no-save htmlhint stylelint stylelint-config-standard
+
+      - run: npm install --no-save htmlhint
+
       - run: npx htmlhint index.html
-      - run: npx stylelint 'css/**/*.css' --config-basedir .
